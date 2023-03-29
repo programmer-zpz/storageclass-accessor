@@ -3,14 +3,14 @@ package webhook
 import (
 	"context"
 	"fmt"
-	"github.com/kubesphere/storageclass-accessor/client/apis/accessor/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/klog/v2"
-	workspacev1alpha1 "kubesphere.io/api/tenant/v1alpha1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/client/config"
+	"storageclass-accessor/client/apis/accessor/v1alpha1"
+	workspacev1alpha1 "storageclass-accessor/client/apis/tenant/v1alpha1"
 )
 
 func validateNameSpace(reqResource ReqInfo, accessor *v1alpha1.Accessor) error {
@@ -40,7 +40,7 @@ func validateWorkSpace(reqResource ReqInfo, accessor *v1alpha1.Accessor) error {
 		klog.Error(err)
 		return err
 	}
-	if wsName, ok := ns.Labels["kubesphere.io/workspace"]; ok {
+	if wsName, ok := ns.Labels["cloudbases.io/workspace"]; ok {
 		var ws *workspacev1alpha1.Workspace
 		ws, err = getWorkSpace(wsName)
 		if err != nil {

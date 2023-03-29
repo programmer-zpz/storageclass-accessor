@@ -1,14 +1,17 @@
-module github.com/kubesphere/storageclass-accessor
+module storageclass-accessor
 
 go 1.16
 
 require (
 	github.com/fsnotify/fsnotify v1.4.9
+	github.com/go-openapi/spec v0.19.7
 	github.com/spf13/cobra v1.2.1
+	golang.org/x/net v0.0.0-20210525063256-abc453219eb5 // indirect
 	k8s.io/api v0.22.1
 	k8s.io/apimachinery v0.22.1
+	k8s.io/client-go v12.0.0+incompatible // indirect
 	k8s.io/klog/v2 v2.9.0
-	kubesphere.io/api v0.0.0-20210917114432-19cb9aacd65f
+	k8s.io/kube-openapi v0.0.0-20210421082810-95288971da7e
 	sigs.k8s.io/controller-runtime v0.10.0
 )
 
