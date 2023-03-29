@@ -1,4 +1,4 @@
-module storageclass-accessor
+module cloudbases.io/storageclass-accessor
 
 go 1.16
 
