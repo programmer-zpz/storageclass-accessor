@@ -1,6 +1,8 @@
 package webhook
 
 import (
+	"cloudbases.io/storageclass-accessor/client/apis/accessor/v1alpha1"
+	workspacev1alpha1 "cloudbases.io/storageclass-accessor/client/apis/tenant/v1alpha1"
 	"context"
 	"fmt"
 	corev1 "k8s.io/api/core/v1"
@@ -9,8 +11,6 @@ import (
 	"k8s.io/klog/v2"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/client/config"
-	"storageclass-accessor/client/apis/accessor/v1alpha1"
-	workspacev1alpha1 "storageclass-accessor/client/apis/tenant/v1alpha1"
 )
 
 func validateNameSpace(reqResource ReqInfo, accessor *v1alpha1.Accessor) error {

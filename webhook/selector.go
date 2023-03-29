@@ -1,9 +1,9 @@
 package webhook
 
 import (
+	"cloudbases.io/storageclass-accessor/client/apis/accessor/v1alpha1"
+	workspacev1alpha1 "cloudbases.io/storageclass-accessor/client/apis/tenant/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
-	"storageclass-accessor/client/apis/accessor/v1alpha1"
-	workspacev1alpha1 "storageclass-accessor/client/apis/tenant/v1alpha1"
 )
 
 func matchLabel(info map[string]string, expressions []v1alpha1.MatchExpressions) bool {

@@ -1,9 +1,9 @@
 package install
 
 import (
+	tenantv1alpha1 "cloudbases.io/storageclass-accessor/client/apis/tenant/v1alpha1"
 	k8sruntime "k8s.io/apimachinery/pkg/runtime"
 	urlruntime "k8s.io/apimachinery/pkg/util/runtime"
-	tenantv1alpha1 "storageclass-accessor/client/apis/tenant/v1alpha1"
 )
 
 func Install(scheme *k8sruntime.Scheme) {
